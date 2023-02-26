@@ -1,4 +1,9 @@
-# react-mentions
+# react-mentions-continued
+
+## 5.0.0
+
+Project forked and renamed to `react-mentions-continued`. The github changelog
+will be used from now on.
 
 ## 4.4.7
 

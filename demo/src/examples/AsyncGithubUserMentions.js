@@ -1,22 +1,22 @@
-import React from 'react'
+import React from "react";
 
-import { MentionsInput, Mention } from '../../../src'
+import { MentionsInput, Mention } from "../../../src";
 
-import { provideExampleValue } from './higher-order'
+import { provideExampleValue } from "./higher-order";
 
-import defaultStyle from './defaultStyle'
-import defaultMentionStyle from './defaultMentionStyle'
+import defaultStyle from "./defaultStyle";
+import defaultMentionStyle from "./defaultMentionStyle";
 
 function fetchUsers(query, callback) {
-  if (!query) return
+  if (!query) return;
   fetch(`https://api.github.com/search/users?q=${query}`, { json: true })
-    .then(res => res.json())
+    .then((res) => res.json())
 
-    // Transform the users to what react-mentions expects
-    .then(res =>
-      res.items.map(user => ({ display: user.login, id: user.login }))
+    // Transform the users to what react-mentions-continued expects
+    .then((res) =>
+      res.items.map((user) => ({ display: user.login, id: user.login }))
     )
-    .then(callback)
+    .then(callback);
 }
 
 function AsyncGithubUserMentions({ value, data, onChange }) {
@@ -32,16 +32,16 @@ function AsyncGithubUserMentions({ value, data, onChange }) {
         a11ySuggestionsListLabel={"Suggested Github users for mention"}
       >
         <Mention
-          displayTransform={login => `@${login}`}
+          displayTransform={(login) => `@${login}`}
           trigger="@"
           data={fetchUsers}
           style={defaultMentionStyle}
         />
       </MentionsInput>
     </div>
-  )
+  );
 }
 
-const asExample = provideExampleValue('')
+const asExample = provideExampleValue("");
 
-export default asExample(AsyncGithubUserMentions)
+export default asExample(AsyncGithubUserMentions);

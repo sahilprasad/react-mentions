@@ -9,30 +9,28 @@ to npm and the "Getting started" instructions would just be misleading.
 
 <!--
 
-# [React Mentions](https://react-mentions.vercel.app)
+# [React Mentions](https://react-mentions-continued.vercel.app)
 
 A React component that let's you mention people in a textarea like you are used to on Facebook or Twitter.
 
-Used in production at [Signavio](https://signavio.com), [State](https://state.com), [Snips](https://snips.ai), [Swat.io](https://swat.io), [GotDone](https://www.gotdone.me), [Volinspire](https://volinspire.com), [Marvin](https://amazingmarvin.com), [Timely](https://timelyapp.com), [GuideFitter](https://www.guidefitter.com/), [Evite](https://www.evite.com/), [Publer](https://publer.me/), [Kontentino](https://www.kontentino.com/), [Wix.com](https://wix.com), [Highlight](https://highlight.run/) and [you?](https://github.com/signavio/react-mentions/edit/master/README.md)
-
 ## Getting started
 
-Install the _react-mentions_ package via npm:
+Install the _react-mentions-continued_ package via npm:
 
 ```
-npm install react-mentions --save
+npm install react-mentions-continued --save
 ```
 
 Or yarn:
 
 ```
-yarn add react-mentions
+yarn add react-mentions-continued
 ```
 
 The package exports two React components for rendering the mentions textarea:
 
 ```javascript
-import { MentionsInput, Mention } from 'react-mentions'
+import { MentionsInput, Mention } from 'react-mentions-continued'
 ```
 
 `MentionsInput` is the main component rendering the textarea control. It takes one or multiple `Mention` components as its children. Each `Mention` component represents a data source for a specific class of mentionable objects, such as users, template variables, issues, etc.
@@ -54,7 +52,7 @@ Example:
 </MentionsInput>
 ```
 
-You can find more examples here: [demo/src/examples](https://github.com/signavio/react-mentions/tree/master/demo/src/examples)
+You can find more examples here: [demo/src/examples](https://github.com/jakehedman/react-mentions-continued/tree/master/demo/src/examples)
 
 ## Configuration
 
@@ -93,17 +91,17 @@ If a function is passed as the `data` prop, that function will be called with th
 
 ## Styling
 
-_react-mentions_ supports css, css modules, and inline styles. It is shipped with only some essential inline style definitions and without any css. Some example inline styles demonstrating how to customize the appearance of the `MentionsInput` can be found at [demo/src/examples/defaultStyle.js](https://github.com/signavio/react-mentions/blob/master/demo/src/examples/defaultStyle.js).
+_react-mentions-continued_ supports css, css modules, and inline styles. It is shipped with only some essential inline style definitions and without any css. Some example inline styles demonstrating how to customize the appearance of the `MentionsInput` can be found at [demo/src/examples/defaultStyle.js](https://github.com/jakehedman/react-mentions-continued/blob/master/demo/src/examples/defaultStyle.js).
 
 If you want to use css, simply assign a `className` prop to `MentionsInput`. All DOM nodes rendered by the component will then receive class name attributes that are derived from the base class name you provided.
 
-If you want to avoid global class names and use css modules instead, you can provide the automatically generated class names as `classNames` to the `MentionsInput`. See [demo/src/examples/CssModules.js](https://github.com/signavio/react-mentions/blob/master/demo/src/examples/CssModules.js) for an example of using _react-mentions_ with css modules.
+If you want to avoid global class names and use css modules instead, you can provide the automatically generated class names as `classNames` to the `MentionsInput`. See [demo/src/examples/CssModules.js](https://github.com/jakehedman/react-mentions-continued/blob/master/demo/src/examples/CssModules.js) for an example of using _react-mentions-continued_ with css modules.
 
 You can also assign `className` and `style` props to the `Mention` elements to define how to highlight the mentioned words.
 
 ## Testing
 
-Due to react-mentions' internal cursor tracking it is not good enough to simulate the editing of the textarea value using `ReactTestUtils.Simulate.change`.
+Due to react-mentions-continued' internal cursor tracking it is not good enough to simulate the editing of the textarea value using `ReactTestUtils.Simulate.change`.
 We recommend using [@testing-library/user-event](https://github.com/testing-library/user-event) for a realistic simulation of events as they would happen in the browser as the user interacts the textarea.
 
 ---

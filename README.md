@@ -1,15 +1,11 @@
 ## Fork notice
 
-The upstream project seems dead and I haven't been able to reach the maintainer
-so I'm creating this fork to hopefully get some PR's merged and eventually
-release a new version to npm.
+This is a fork of [react-mentions](https://github.com/signavio/react-mentions)
+since the project seems abandoned and I haven't been able to reach the
+maintainer. The goal of this project is mainly to get some of the old PRs
+merged and keep this thing alive.
 
-The original README.md has been removed for now since this fork isn't published
-to npm and the "Getting started" instructions would just be misleading.
-
-<!--
-
-# [React Mentions](https://react-mentions-continued.vercel.app)
+# [React Mentions (continued)](https://jakehedman.github.io/react-mentions-continued/)
 
 A React component that let's you mention people in a textarea like you are used to on Facebook or Twitter.
 
@@ -30,7 +26,7 @@ yarn add react-mentions-continued
 The package exports two React components for rendering the mentions textarea:
 
 ```javascript
-import { MentionsInput, Mention } from 'react-mentions-continued'
+import { MentionsInput, Mention } from "react-mentions-continued";
 ```
 
 `MentionsInput` is the main component rendering the textarea control. It takes one or multiple `Mention` components as its children. Each `Mention` component represents a data source for a specific class of mentionable objects, such as users, template variables, issues, etc.
@@ -59,7 +55,7 @@ You can find more examples here: [demo/src/examples](https://github.com/jakehedm
 The `MentionsInput` supports the following props for configuring the widget:
 
 | Prop name                   | Type                                                    | Default value  | Description                                                                            |
-|-----------------------------|---------------------------------------------------------|----------------|----------------------------------------------------------------------------------------|
+| --------------------------- | ------------------------------------------------------- | -------------- | -------------------------------------------------------------------------------------- |
 | value                       | string                                                  | `''`           | The value containing markup for mentions                                               |
 | onChange                    | function (event, newValue, newPlainTextValue, mentions) | empty function | A callback that is invoked when the user changes the value in the mentions input       |
 | onKeyDown                   | function (event)                                        | empty function | A callback that is invoked when the user presses a key in the mentions input           |

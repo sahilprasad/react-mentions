@@ -1,7 +1,7 @@
 {
   "name": "react-mentions-continued",
   "version": "5.0.0",
-  "description": "React mentions input",
+  "description": "React mentions input (forked from react-mentions)",
   "main": "dist/react-mentions-continued.cjs.js",
   "module": "dist/react-mentions-continued.esm.js",
   "files": [

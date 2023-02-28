@@ -26,7 +26,7 @@ yarn add react-mentions-continued
 The package exports two React components for rendering the mentions textarea:
 
 ```javascript
-import { MentionsInput, Mention } from "react-mentions-continued";
+import { MentionsInput, Mention } from 'react-mentions-continued'
 ```
 
 `MentionsInput` is the main component rendering the textarea control. It takes one or multiple `Mention` components as its children. Each `Mention` component represents a data source for a specific class of mentionable objects, such as users, template variables, issues, etc.
@@ -104,5 +104,3 @@ We recommend using [@testing-library/user-event](https://github.com/testing-libr
 
 If you want to contribute, first of all: thank you ❤️.
 Please check [CONTRIBUTING.md](/CONTRIBUTING.md) and/or create an issue.
-
--->

@@ -20,8 +20,7 @@ function BottomGuard({ value, data, onChange, onAdd }) {
       <h3>Bottom guard example</h3>
       <p>
         Note that the bottom input will open the suggestions list above the
-        cursor.
-        Also, the middle one will render its suggestions always on top,
+        cursor. Also, the middle one will render its suggestions always on top,
         even if it has enough space below.
       </p>
       <div
@@ -39,7 +38,7 @@ function BottomGuard({ value, data, onChange, onAdd }) {
           onChange={onChange}
           style={defaultStyle}
           placeholder={"Mention people using '@'"}
-          a11ySuggestionsListLabel={"Suggested mentions"}
+          a11ySuggestionsListLabel={'Suggested mentions'}
           suggestionsPortalHost={container}
           allowSuggestionsAboveCursor={true}
         >
@@ -69,7 +68,7 @@ function BottomGuard({ value, data, onChange, onAdd }) {
           onChange={onChange}
           style={defaultStyle}
           placeholder={"Mention people using '@'"}
-          a11ySuggestionsListLabel={"Suggested mentions"}
+          a11ySuggestionsListLabel={'Suggested mentions'}
           suggestionsPortalHost={container}
           allowSuggestionsAboveCursor={true}
         >

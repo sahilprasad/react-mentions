@@ -122,7 +122,7 @@ function Highlighter({
     return React.cloneElement(child, props)
   }
 
-  const renderHighlighterCaret = (children) => {
+  const renderHighlighterCaret = children => {
     return (
       <span {...style('caret')} ref={setCaretElement} key="caret">
         {children}
@@ -188,7 +188,7 @@ const styled = defaultStyle(
       visibility: 'hidden',
     },
   },
-  (props) => ({
+  props => ({
     '&singleLine': props.singleLine,
   })
 )

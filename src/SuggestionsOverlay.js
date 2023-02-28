@@ -108,7 +108,7 @@ function SuggestionsOverlay({
     onSelect(suggestion, queryInfo)
   }
 
-  const getID = (suggestion) => {
+  const getID = suggestion => {
     if (typeof suggestion === 'string') {
       return suggestion
     }

@@ -50,7 +50,7 @@ function Suggestion({
     return display
   }
 
-  const renderHighlightedDisplay = (display) => {
+  const renderHighlightedDisplay = display => {
     let i = getSubstringIndex(display, query, ignoreAccents)
 
     if (i === -1) {
@@ -95,7 +95,7 @@ const styled = defaultStyle(
   {
     cursor: 'pointer',
   },
-  (props) => ({ '&focused': props.focused })
+  props => ({ '&focused': props.focused })
 )
 
 export default styled(Suggestion)

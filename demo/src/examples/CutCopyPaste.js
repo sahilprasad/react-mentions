@@ -20,7 +20,10 @@ function CutCopyPaste({ data, disabledSource }) {
 
   return (
     <div className="multiple-triggers">
-      <h3>Copy and paste mentions between mention components{disabledSource && " from a disabled field"}</h3>
+      <h3>
+        Copy and paste mentions between mention components
+        {disabledSource && ' from a disabled field'}
+      </h3>
       <p>This functionality is not supported in Internet Explorer.</p>
 
       <div style={{ display: 'flex' }}>
@@ -51,7 +54,7 @@ function CutCopyPaste({ data, disabledSource }) {
             <textarea
               style={{ width: '100%', height: 80 }}
               value={plainTextValue}
-              onChange={(event) => setPlainTextValue(event.target.value)}
+              onChange={event => setPlainTextValue(event.target.value)}
             />
           </div>
         </div>
@@ -66,7 +69,7 @@ const MultiMention = ({ value, data, onChange, onAdd, disabled }) => (
     onChange={onChange}
     style={defaultStyle}
     placeholder={"Mention people using '@'"}
-    a11ySuggestionsListLabel={"Suggested mentions"}
+    a11ySuggestionsListLabel={'Suggested mentions'}
     disabled={disabled}
   >
     <Mention
@@ -91,7 +94,7 @@ const MultiMention = ({ value, data, onChange, onAdd, disabled }) => (
     <Mention
       markup="@[__display__](email:__id__)"
       trigger={emailRegex}
-      data={(search) => [{ id: search, display: search }]}
+      data={search => [{ id: search, display: search }]}
       onAdd={onAdd}
       style={{ backgroundColor: '#d1c4e9' }}
     />

@@ -44,7 +44,7 @@ function SuggestionPortal({ value, data, onChange, onAdd }) {
           onChange={onChange}
           style={defaultStyle}
           placeholder={"Mention people using '@'"}
-          a11ySuggestionsListLabel={"Suggested mentions"}
+          a11ySuggestionsListLabel={'Suggested mentions'}
           suggestionsPortalHost={container}
         >
           <Mention data={data} onAdd={onAdd} style={defaultMentionStyle} />
@@ -56,7 +56,7 @@ function SuggestionPortal({ value, data, onChange, onAdd }) {
           onChange={onChange}
           style={scrollableStyle}
           placeholder={"Mention people using '@'"}
-          a11ySuggestionsListLabel={"Suggested mentions"}
+          a11ySuggestionsListLabel={'Suggested mentions'}
           suggestionsPortalHost={container}
         >
           <Mention data={data} onAdd={onAdd} style={defaultMentionStyle} />

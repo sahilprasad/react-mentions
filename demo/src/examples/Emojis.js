@@ -15,10 +15,10 @@ function Emojis({ value, data, onChange, onAdd }) {
     fetch(
       'https://gist.githubusercontent.com/oliveratgithub/0bf11a9aff0d6da7b46f1490f86a71eb/raw/d8e4b78cfe66862cf3809443c1dba017f37b61db/emojis.json'
     )
-      .then((response) => {
+      .then(response => {
         return response.json()
       })
-      .then((jsonData) => {
+      .then(jsonData => {
         setEmojis(jsonData.emojis)
       })
   }, [])
@@ -27,7 +27,7 @@ function Emojis({ value, data, onChange, onAdd }) {
     if (query.length === 0) return
 
     const matches = emojis
-      .filter((emoji) => {
+      .filter(emoji => {
         return emoji.name.indexOf(query.toLowerCase()) > -1
       })
       .slice(0, 10)
@@ -46,7 +46,7 @@ function Emojis({ value, data, onChange, onAdd }) {
       >
         <Mention
           trigger="@"
-          displayTransform={(username) => `@${username}`}
+          displayTransform={username => `@${username}`}
           markup="@__id__"
           data={data}
           regex={/@(\S+)/}

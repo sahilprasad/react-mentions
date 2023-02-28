@@ -138,6 +138,8 @@ class MentionsInput extends React.Component {
 
       caretPosition: null,
       suggestionsPosition: {},
+
+      setSelectionAfterHandlePaste: false,
     }
   }
 
@@ -160,6 +162,10 @@ class MentionsInput extends React.Component {
     // the cursor to jump to the end
     if (this.state.setSelectionAfterMentionChange) {
       this.setState({ setSelectionAfterMentionChange: false })
+      this.setSelection(this.state.selectionStart, this.state.selectionEnd)
+    }
+    if (this.state.setSelectionAfterHandlePaste) {
+      this.setState({ setSelectionAfterHandlePaste: false })
       this.setSelection(this.state.selectionStart, this.state.selectionEnd)
     }
   }
@@ -407,7 +413,11 @@ class MentionsInput extends React.Component {
     const nextPos =
       (startOfMention || selectionStart) +
       getPlainText(pastedMentions || pastedData, config).length
-    this.setSelection(nextPos, nextPos)
+    this.setState({
+      selectionStart: nextPos,
+      selectionEnd: nextPos,
+      setSelectionAfterHandlePaste: true,
+    })
   }
 
   saveSelectionToClipboard(event) {
